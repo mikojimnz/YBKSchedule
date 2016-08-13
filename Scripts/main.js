@@ -55,7 +55,7 @@ function update() {
     document.getElementById("b").innerHTML = day(bluTgt);
     document.getElementById("pu").innerHTML = day(purTgt);
     document.getElementById("pi").innerHTML = day(pinTgt);
-    setTimeout(call,1000);
+    setTimeout(call, 3600000);
 }
 
 update();
