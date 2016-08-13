@@ -6,7 +6,7 @@ function update() {
         } else if (i == 0) {
             return " DUE TODAY";
         } else if (i < 0) {
-            return "OVERDUE";
+            return "Closed";
         } else {
             return i + " Days Left";
         }
