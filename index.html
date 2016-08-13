@@ -8,47 +8,99 @@
     </head>
     <style>
         html * {
-            font-size: 40px;
+            font-size: 42px;
             color: #000000;
             font-family: "Helvetica";
         }
-
+        
+        .title {
+            font-size: 64px;
+        }
+        
+        .right {
+            text-align: right;
+        }
+        
         #red {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #F44336 solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
 
         #yellow {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #FFEB3B solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
 
         #green {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #4CAF50 solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
 
         #blue {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #2196F3 solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
 
         #purple {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #9C27B0 solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
 
         #pink {
+            margin-left: 10%;
+            margin-right: 10%;
+            border-bottom: #E91E63 solid thick;
+            border-width: 3px;
+            text-align: left;
+            display: block;
         }
     </style>
     <body>
-        <div id="head">
+        <div id="head" style="text-align: center">
+            <p class="title">Yearbook Deadlines</p>
         </div>
-        <div id="body">
+        <div id="body" style="text-align: center">
              <div id="red">
+                   <p>Red: <span id="r">?</span></p>
              </div>
              <div id="yellow">
+                 <p>Yellow: <span id="y">?</span></p>
              </div>
              <div id="green">
+                 <p>Green: <span id="g">?</span></p>
              </div>
              <div id="blue">
+                 <p>Blue: <span id="b">?</span></p>
              </div>
              <div id="purple">
+                 <p>Purple: <span id="pu">?</span></p>
              </div>
              <div id="pink">
+                 <p>Pink: <span id="pi">?</span></p>
              </div>
         </div>
         <div id="footer">
         </div>
+        <script type="text/javascript" src="Scripts/main.js"></script>
     </body>
 </html>
