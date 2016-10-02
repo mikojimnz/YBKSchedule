@@ -14,37 +14,37 @@ function update() {
     }
     
     var redTgt = function () {
-        var a = Date.parse("10/27/2016 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("10/25/2016 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24));
         return b;
     }();
     
     var yelTgt = function () {
-        var a = Date.parse("11/17/2016 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("11/15/2016 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24));
         return b;
     }();
     
     var greTgt = function () {
-        var a = Date.parse("12/08/2016 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("12/05/2016 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24)); 
         return b;
     }();
     
     var bluTgt = function () {
-        var a = Date.parse("01/12/2017 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("01/10/2017 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24));
         return b;
     }();
     
     var purTgt = function () {
-        var a = Date.parse("02/09/2017 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("02/07/2017 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24));
         return b;
     }();
     
     var pinTgt = function () {
-        var a = Date.parse("03/09/2017 00:00:00") - Date.parse(new Date());
+        var a = Date.parse("03/07/2017 00:00:00") - Date.parse(new Date());
         var b = Math.floor(a/(1000*60*60*24));
         return b;
     }();
