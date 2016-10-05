@@ -1,61 +1,61 @@
 function update() {
-    
-    var day = function (i) {
-        if (i == 1) {
-            return i + " DAY LEFT";
-        } else if (i == 0) {
-            return " DUE TODAY";
-        } else if (i < 0) {
-            return "Closed";
+    var calTime = function (time) {
+        var rem =  Date.parse(time) - Date.parse(new Date());
+        var sec = Math.floor((rem/1000)%60);          //sec
+        var min = Math.floor((rem/1000/60)%60);       //min
+        var hour = Math.floor((rem/(1000*60*60))%24); //hour
+        var day = Math.floor(rem/(1000*60*60*24));    //day
+        
+        var count = "";
+        
+        if (day == 1) {
+            count += day + " Day, ";
+        } else if (day <= 0) {
+            count += "";
         } else {
-            return i + " Days Left";
+            count += day + " Days, ";
         }
-    
+        
+        if (hour == 1) {
+            count += hour + " Hour, ";
+        } else if (hour <= 0) {
+            count += "";
+        } else {
+            count += hour + " Hours, ";
+        }
+        
+        if (min == 1) {
+            count += min + " Minute, ";
+        } else if (min <= 0) {
+            count += "";
+        } else {
+            count += min + " Minutes, ";
+        }
+        
+        if (sec == 1) {
+            count += sec + " Second";
+        } else if (sec <= 0) {
+            count += "0 Seconds";
+        } else {
+            count += sec + " Seconds";
+        }
+        
+        count += " Left";
+        
+        if (count == "0 Seconds Left") {
+            return "CLOSED";
+        }
+        
+        return count;
     }
     
-    var redTgt = function () {
-        var a = Date.parse("10/26/2016 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24));
-        return b;
-    }();
-    
-    var yelTgt = function () {
-        var a = Date.parse("11/16/2016 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24));
-        return b;
-    }();
-    
-    var greTgt = function () {
-        var a = Date.parse("12/06/2016 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24)); 
-        return b;
-    }();
-    
-    var bluTgt = function () {
-        var a = Date.parse("01/11/2017 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24));
-        return b;
-    }();
-    
-    var purTgt = function () {
-        var a = Date.parse("02/08/2017 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24));
-        return b;
-    }();
-    
-    var pinTgt = function () {
-        var a = Date.parse("03/08/2017 00:00:00") - Date.parse(new Date());
-        var b = Math.floor(a/(1000*60*60*24));
-        return b;
-    }();
-    
-    document.getElementById("r").innerHTML = day(redTgt);
-    document.getElementById("y").innerHTML = day(yelTgt);
-    document.getElementById("g").innerHTML = day(greTgt);
-    document.getElementById("b").innerHTML = day(bluTgt);
-    document.getElementById("pu").innerHTML = day(purTgt);
-    document.getElementById("pi").innerHTML = day(pinTgt);
-    setTimeout(call, 3600000);
+    document.getElementById("r").innerHTML = calTime("10/25/2016 13:00:00");
+    document.getElementById("y").innerHTML = calTime("11/16/2016 12:00:00");
+    document.getElementById("g").innerHTML = calTime("12/06/2016 12:00:00");
+    document.getElementById("b").innerHTML = calTime("01/11/2017 12:00:00");
+    document.getElementById("pu").innerHTML = calTime("02/08/2017 12:00:00");
+    document.getElementById("pi").innerHTML = calTime("03/08/2017 12:00:00");
+    setTimeout(update, 1000);
 }
 
 update();
