@@ -1,6 +1,6 @@
 function update() {
     var calTime = function (time) {
-        var rem =  Date.parse(time) - Date.parse(new Date());
+        var rem = Date.parse(time) - Date.parse(new Date());
         var sec = Math.floor((rem/1000)%60);          //sec
         var min = Math.floor((rem/1000/60)%60);       //min
         var hour = Math.floor((rem/(1000*60*60))%24); //hour
@@ -53,7 +53,7 @@ function update() {
     document.getElementById("y").innerHTML = calTime("11/15/2016 12:00:00");
     document.getElementById("g").innerHTML = calTime("12/05/2016 12:00:00");
     document.getElementById("b").innerHTML = calTime("01/11/2017 12:00:00");
-    document.getElementById("pu").innerHTML = calTime("02/08/2017 12:00:00");
+    document.getElementById("pu").innerHTML = calTime("02/07/2017 12:00:00");
     document.getElementById("pi").innerHTML = calTime("03/08/2017 12:00:00");
     setTimeout(update, 1000);
 }
