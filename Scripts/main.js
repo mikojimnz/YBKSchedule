@@ -43,7 +43,7 @@ function update() {
 		count += " Left";
 
 		if (count == "0 Seconds Left") {
-			return "Closed";
+			return "Completed";
 		}
 
 		return count;
