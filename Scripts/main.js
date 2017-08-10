@@ -1,55 +1,31 @@
 function update() {
     var calTime = function (time) {
-        var rem = Date.parse(time) - Date.parse(new Date());
-        var sec = Math.floor((rem / 1000) % 60); // sec
-        var min = Math.floor((rem / 1000 / 60) % 60); // min
-        var hour = Math.floor((rem / (1000 * 60 * 60)) % 24); // hour
-        var day = Math.floor(rem / (1000 * 60 * 60 * 24)); // day
+        var rem = (Date.parse(time) - Date.parse(new Date())) / 1000;
+        var sec = Math.floor(rem % 60); // sec
+        var min = Math.floor((rem / 60) % 60); // min
+        var hour = Math.floor((rem / (60 * 60)) % 24); // hour
+        var day = Math.floor(rem / (60 * 60 * 24)); // day
 
         var count = "";
 
-        if (day == 1) {
-            count += day + " Day ";
-        } else if (day <= 0) {
-            count += "";
+        if (sec >= 1) {
+            count = sec == 1 ? sec + " Second Left" : day + " Seconds Left";
+        }
+        if (min >= 1) {
+            count = min == 1 ? sec + " Minute Left" : day + " Minutes Left";
+        }
+        if (hour >= 1) {
+            count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
+        }
+        if (day >= 1) {
+            count = day == 1 ? day + " Day Left" : day + " Days Left";
         } else {
-            count += day + " Days ";
+            count = "Completed";
         }
-
-//        if (hour == 1) {
-//            count += hour + " Hour, ";
-//        } else if (hour <= 0) {
-//            count += "";
-//        } else {
-//            count += hour + " Hours, ";
-//        }
-//
-//        if (min == 1) {
-//            count += min + " Minute, ";
-//        } else if (min <= 0) {
-//            count += "";
-//        } else {
-//            count += min + " Minutes, ";
-//        }
-//
-//        if (sec == 1) {
-//            count += sec + " Second";
-//        } else if (sec <= 0) {
-//            count += "0 Seconds";
-//        } else {
-//            count += sec + " Seconds";
-//        }
-
-        count += " Left";
-
-        if (count == "0 Seconds Left") {
-            return "Completed";
-        }
-
         return count;
     };
 
-    document.getElementById("r").innerHTML = calTime("11/2/2017 13:00:00");
+    document.getElementById("r").innerHTML = calTime("11/02/2017 13:00:00");
     document.getElementById("b").innerHTML = calTime("11/16/2017 12:00:00");
     document.getElementById("g").innerHTML = calTime("12/07/2017 12:00:00");
     document.getElementById("y").innerHTML = calTime("01/11/2018 12:00:00");
