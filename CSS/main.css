@@ -1,21 +1,14 @@
 html * {
-    font-size: 2.5vw;
     color: #ffffff;
     font-family: "Helvetica";
 }
 
 .title {
-    font-size: 4vw;
-    margin-left: 10%;
-    margin-right: 10%;
     border-width: 8px;
     text-align: center;
 }
 
 .container {
-    margin-bottom: 2%;
-    margin-left: 25%;
-    margin-right: 25%;
     text-align: center;
     display: block;
     height: 12%;
@@ -50,4 +43,36 @@ html * {
 
 #pink {
     background-color: rgba(236, 64, 122, 0.75);
+}
+
+@media screen and (orientation: landscape) {
+    html * {
+        font-size: 6vh;
+    }
+    .title {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8vh;
+    }
+    .container {
+        margin-bottom: 2%;
+        margin-left: 15%;
+        margin-right: 15%;
+    }
+}
+
+@media screen and (orientation: portrait) {
+    html * {
+        font-size: 6vw;
+    }
+    .title {
+        margin-left: 10%;
+        margin-right: 10%;
+        font-size: 8vw;
+    }
+    .container {
+        margin-bottom: 5%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
 }
