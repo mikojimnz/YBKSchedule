@@ -1,5 +1,5 @@
 html * {
-    color: #ffffff;
+    color: #000;
     font-family: "Helvetica";
 }
 
@@ -15,10 +15,31 @@ html * {
     border-radius: 25px;
 }
 
+.textL {
+    color: black;
+    font-size: 25px;
+    line-height: 1px;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.textR {
+    color: black;
+    font-size: 25px;
+    line-height: 1px;
+    text-align: right;
+    display: block;
+    padding-right: 5%;
+}
+
 .body {
     background-size: cover;
     background-position: center;
-    background-color: #000000;
+    background-color: #fff;
+}
+
+.scrollable {
+    overflow: scroll;
 }
 
 #red {
