@@ -46,7 +46,7 @@ function update() {
     document.getElementById("pud").innerHTML = calTime("02/01/2018 12:30:00");
     
     document.getElementById("pi").innerHTML = calTime("03/07/2018 12:30:00");
-    document.getElementById("piu").innerHTML = calTime("03/05/2018 12:30:00");
+    document.getElementById("pip").innerHTML = calTime("03/05/2018 12:30:00");
     document.getElementById("pid").innerHTML = calTime("03/08/2018 12:30:00");
     setTimeout(update, 1000);
 }
