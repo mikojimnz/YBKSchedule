@@ -1,5 +1,6 @@
 html, body {
-    overflow: scroll;
+    overflow: scroll; 
+    -webkit-overflow-scrolling: touch;
     margin: 0;
     margin: 0;
     padding: 0;
