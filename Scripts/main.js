@@ -17,10 +17,10 @@ function update() {
             count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
         } 
         if (min >= 1) {
-            count = min == 1 ? sec + " Minute Left" : day + " Minutes Left";
+            count = min == 1 ? min + " Minute Left" : min + " Minutes Left";
         }
         if (sec >= 1) {
-            count = sec == 1 ? sec + " Second Left" : day + " Seconds Left";
+            count = sec == 1 ? sec + " Second Left" : sec + " Seconds Left";
         }
         
         return count;
