@@ -8,21 +8,20 @@ function update() {
 
         var count = "";
 
+        if (sec >= 1) {
+            count = sec == 1 ? sec + " Second Left" : day + " Seconds Left";
+        }
+        if (min >= 1) {
+            count = min == 1 ? sec + " Minute Left" : day + " Minutes Left";
+        }
+        if (hour >= 1) {
+            count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
+        }
         if (day >= 1) {
             count = day == 1 ? day + " Day Left" : day + " Days Left";
         } else {
             count = "Completed";
         }
-        if (hour >= 1) {
-            count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
-        } 
-        if (min >= 1) {
-            count = min == 1 ? sec + " Minute Left" : day + " Minutes Left";
-        }
-        if (sec >= 1) {
-            count = sec == 1 ? sec + " Second Left" : day + " Seconds Left";
-        }
-        
         return count;
     };
 
