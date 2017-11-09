@@ -5,24 +5,20 @@ function update() {
         var min = Math.floor((rem / 60) % 60); // min
         var hour = Math.floor((rem / (60 * 60)) % 24); // hour
         var day = Math.floor(rem / (60 * 60 * 24)); // day
-
-        var count = "";
       
         if (day >= 1) {
-            count = day == 1 ? day + " Day Left" : day + " Days Left";
-        } else {
-            count = "Completed";
+            return day == 1 ? day + " Day Left" : day + " Days Left";
         }
         if (hour >= 1) {
-            count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
+            return hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
         }
         if (min >= 1) {
-            count = min == 1 ? min + " Minute Left" : min + " Minutes Left";
+            return min == 1 ? min + " Minute Left" : min + " Minutes Left";
         }
         if (sec >= 1) {
-            count = sec == 1 ? sec + " Second Left" : sec + " Seconds Left";
+            return sec == 1 ? sec + " Second Left" : sec + " Seconds Left";
         }
-        return count;
+		return "Completed";
     };
 
     document.getElementById("r").innerHTML = calTime("10/31/2017 13:30:00");
