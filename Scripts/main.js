@@ -7,7 +7,7 @@ function update() {
         var day = Math.floor(rem / (60 * 60 * 24)); // day
 
         var count = "";
-
+      
         if (day >= 1) {
             count = day == 1 ? day + " Day Left" : day + " Days Left";
         } else {
@@ -15,14 +15,13 @@ function update() {
         }
         if (hour >= 1) {
             count = hour == 1 ? hour + " Hour Left" : hour + " Hours Left";
-        } 
+        }
         if (min >= 1) {
             count = min == 1 ? min + " Minute Left" : min + " Minutes Left";
         }
         if (sec >= 1) {
             count = sec == 1 ? sec + " Second Left" : sec + " Seconds Left";
         }
-        
         return count;
     };
 
